@@ -7,8 +7,8 @@ def main():
     parser.add_argument('-p', '--path', type=str, help='Parent path to ONNX models.')
     parser.add_argument('-m', '--model', type=str, help='Path to an ONNX model.')
     parser.add_argument('-macs', '--calculate-macs', action='store_true', help='Calculate MACs.')
-    parser.add_argument('-vis', '--visualize', action='store_true', help='Display visualizations.')
-    parser.add_argument('-out', type=str, default='result.png', help='Output file for visualizations.')
+    parser.add_argument('-vis', type=str, help='Save visualizations plot to.')
+    parser.add_argument('-excel', type=str, help='Export results in excel format to.')
     parser.add_argument('--loglevel', default='warning', type=str,
                         help='Provide logging level. Example --loglevel debug' )
     args = parser.parse_args()
@@ -22,7 +22,7 @@ def main():
         print("No path or model specified!")
         sys.exit(1)
     
-    report(results, args.out, args.visualize)
+    report(results, args.excel, args.vis)
 
 if __name__ == '__main__':
     main()
