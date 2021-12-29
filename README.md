@@ -9,6 +9,8 @@ Tools for analyzing onnx models
 
 - After python envrionment is properly set: `pip install -r requirements.txt`
 
+- Optional: [GitLFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
+
 ### Usage
 ```
 $ python analyze.py -h
@@ -33,6 +35,8 @@ Assuming your onnx models have been placed under `models/` folder:
 python analyze.py -p models/ -vis result.png -excel result.xlsx
 ```
 Above command will print statistics for all models under that folder to console and save both visualization plots and data in excel format to current directory.
+
+**NOTE:** the existing models under `models/` folder are uploaded via [GitLFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage).
 
 #### Outputs:
 
