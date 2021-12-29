@@ -23,7 +23,7 @@ def analyze(path: str, calculate_macs=False) -> list:
 
 def excel_sheetname(model_path: str) -> str:
     model_name = os.path.basename(model_path)
-    return re.sub('[^A-Za-z0-9]+', '', model_name)[:20]
+    return re.sub('[^A-Za-z0-9\._]+', '', model_name)[:30]
 
 def report(results: list, excel: str, vis: str):
     if vis:
