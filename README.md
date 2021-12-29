@@ -5,11 +5,18 @@ Tools for analyzing onnx models
 
 - [direnv](https://direnv.net/), can be skipped by running commands in [.envrc](.envrc) manually.
 
-- [pyenv](https://github.com/pyenv/pyenv), with `pyenv install 3.9.9`, can be other python3 versions, controlled by `PYENV_VERSION`
+- [pyenv](https://github.com/pyenv/pyenv) with [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) plugin. To install python 3.9.9 and create a virtual env based on it:
+    ```
+    pyenv install 3.9.9
+    pyenv virtualenv 3.9.9 `basename "$PWD"`
+    ```
 
-- After python envrionment is properly set: `pip install -r requirements.txt`
+- Install dependencies
+    ```
+    pip install -r requirements.txt
+    ```
 
-- Optional: [GitLFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
+- Optional: [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
 
 ### Usage
 ```
@@ -36,7 +43,7 @@ python analyze.py -p models/ -vis result.png -excel result.xlsx
 ```
 Above command will print statistics for all models under that folder to console and save both visualization plots and data in excel format to current directory.
 
-**NOTE:** the existing models under `models/` folder are uploaded via [GitLFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage).
+**NOTE:** the existing models under `models/` folder are uploaded via [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage).
 
 #### Outputs:
 
