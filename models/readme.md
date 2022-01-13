@@ -7,7 +7,7 @@ They are exported with pretrained parameters and onnx opset 11
 | 2D detection/segmentation | detection.maskrcnn_resnet50_fpn_torchvision_3x720x1280.onnx | Mask R-CNN with resnet50 backbone and FPN | from torchvsion implementation |
 |                           | yolov5l_pytorch_hub_640.onnx | YOLOv5 large  | from PyTorch Hub |
 |                           | unet_3x720x1280.onnx | UNet  | from official PyTorch implementation |
-| 3D Object detection       | point_pillars_nuScenes_pfe.onnx/_rpn.onnx | Pointpillars | exported from CenterPoint repo, pretrained with nuSences dataset |                   
+| 3D Object detection       | pointpillars_nuScenes.onnx | Pointpillars | exported and merged pfe+rpn from CenterPoint repo, pretrained with nuSences dataset |                   
 | Traffic sign              | detection.ssdlite320_mobilenet_v3_large_torchvision_3x320x320.onnx | SSDlite with MobileNetV3 Large backbone | from torchvsion implementation |
 |                           | ssd_mobilenet_v1_10.onnx | SSD with MobileNetV1 backbone | from onnx model zoo, opset 10 |
 | Feature fusion            | mobilebert_squad11_int8_qdq_89.4f1.onnx | mobilebert | use NLP QA pretrained model |
